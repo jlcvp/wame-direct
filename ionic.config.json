@@ -1,0 +1,7 @@
+{
+  "name": "wame-direct",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
