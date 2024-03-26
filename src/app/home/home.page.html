@@ -1,11 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -14,7 +6,15 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card class="card-max-width">
+      <ion-card-header color="primary">
+        <ion-card-title>Inicie uma conversa no Whatsapp</ion-card-title>
+        <ion-card-subtitle>Não é necessário salvar o contato no seu aparelho</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input type="text" expand="block" placeholder="Digite o número com DDD" [(ngModel)]="numberInput"></ion-input>
+        <ion-button expand="block" (click)="openWhatsapp()" [disabled]="!isInputValid">Abrir Whatsapp</ion-button>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
