@@ -16,7 +16,7 @@ https://wame.leu.dev.br
 2. Navegue até o diretório do projeto: `cd wame-direct`.
 3. Instale as dependências do projeto: `npm install`.
 4. Inicie a aplicação: `npm start`.
-5. Acesse a aplicação em seu navegador: `http://localhost:3000`.
+5. Acesse a aplicação em seu navegador: `http://localhost:4200`.
 
 ## Contribuição
 
