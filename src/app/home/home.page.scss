@@ -1,6 +1,15 @@
+.bg-content {
+  position: absolute;
+  background-image: url('../../assets/bg_pattern.png') !important;
+  background-repeat: repeat !important;
+  background-color: var(--ion-color-medium);
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
+}
+
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -8,32 +17,12 @@
   transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
 .card-max-width {
-  max-width: 460px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-ion-content {
-  --background: var(--ion-color-light) url('../../assets/bg_pattern.png') repeat;
-  background-image: url('../../assets/bg_pattern.png') !important;
-  background-repeat: repeat !important;
-  background-color: var(--ion-color-light);
+.hint-text {
+  font-size: 0.8em;
+  opacity: 0.5;
 }

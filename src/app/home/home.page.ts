@@ -11,18 +11,26 @@ export class HomePage {
 
   openWhatsapp() {
     let number = this.sanitizeNumber()
-    window.open(`https://wa.me/55${number}`, '_blank')
+    window.open(`whatsapp://send/?phone=55${number}&text&type=phone_number&app_absent=0`, '_blank')
   }
 
-  sanitizeNumber() {
-    this.numberInput = this.numberInput.replace(/\D/g, '')
-    return Number(this.numberInput).toString()
+  sanitizeNumber(): string {
+    let numbersOnly = this.numberInput.replace(/\D/g, '')
+    numbersOnly = numbersOnly.replace(/^0+/, '') // removing leading zeroes
+    
+    // there is a region on RS that uses 55 as DDD, 
+    // so we must also validate length before assuming 55 is a country code
+    if (numbersOnly.length >= 12 && numbersOnly.startsWith('55')) { 
+      numbersOnly = numbersOnly.slice(2)
+    }
+
+    return Number(numbersOnly).toString()
   }
 
   get isInputValid() {
-    const validPattern = /^\d{10,15}$/
+    const validPattern = /^\d{10,11}$/
     const numbersOnly = this.sanitizeNumber()
-    
+    console.log(`numbersOnly: ${numbersOnly}`)
     if (!validPattern.test(numbersOnly)) {
       return false
     }

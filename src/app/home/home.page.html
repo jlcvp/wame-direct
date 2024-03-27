@@ -1,16 +1,16 @@
 <ion-content [fullscreen]="true">
-  <div color="primary" class="bg-content">
-    <div id="container">
-      <ion-card class="card-max-width">
-        <ion-card-header color="primary">
-          <ion-card-title>Inicie uma conversa no Whatsapp</ion-card-title>
-          <ion-card-subtitle>Não é necessário salvar o contato no seu aparelho</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-input type="text" expand="block" placeholder="Digite o número com DDD" [(ngModel)]="numberInput"></ion-input>
-          <ion-button expand="block" (click)="openWhatsapp()" [disabled]="!isInputValid">Abrir Whatsapp</ion-button>
-        </ion-card-content>
-      </ion-card>
-    </div>
+  <div class="bg-content">
+  </div>
+  <div id="container" class="ion-padding">
+    <ion-card class="card-max-width">
+      <ion-card-header color="primary">
+        <ion-card-title>Inicie uma conversa no Whatsapp</ion-card-title>
+        <ion-card-subtitle>Não é necessário salvar o contato no seu aparelho <br><ion-text class="hint-text">(Apenas números do Brasil)</ion-text></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input label="Número com DDD" labelPlacement="stacked" type="text" expand="block" placeholder="ex: (81) 98756-1234" [(ngModel)]="numberInput"></ion-input>
+        <ion-button expand="block" (click)="openWhatsapp()" [disabled]="!isInputValid">Abrir Whatsapp</ion-button>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
