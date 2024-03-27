@@ -2,28 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <title>WaMe Direct</title>
 
-  <base href="/" />
+  <base href="/"/>
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png"/>
 
   <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
   <meta name="title" content="Wa.Me Redirect">
   <meta name="description" content="Abra uma conversa com um número whatsapp sem precisar adicioná-lo na sua agenda ">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#107f72">
 </head>
 
 <body>
+  <style>
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #107f72;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 300ms ease-in-out;
+    }
+    .centered-img {
+      width: 200px;
+      height: 200px;
+    }
+    #splash-image {
+      display: inline-block;
+      animation: rotation 1s infinite ease-out;
+    }
+    @keyframes rotation {
+      0% {
+        transform: rotate(-3deg);
+      }
+      50% {
+        transform: rotate(3deg);
+      }
+      100% {
+        transform: rotate(-3deg);
+      }
+    }
+  </style>
+  <div id="splash-container" class="splash-screen">
+    <img id="splash-image" class="centered-img" src="assets/icons/android/android-launchericon-192-192.png" alt="Wa.Me Direct" />
+  </div>
   <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 
 </html>
