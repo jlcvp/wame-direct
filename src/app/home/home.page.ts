@@ -12,7 +12,7 @@ export class HomePage {
   openWhatsapp() {
     let number = this.sanitizeNumber()
     this.numberInput = number
-    window.open(`whatsapp://send/?phone=55${number}&text&type=phone_number&app_absent=0`, '_blank')
+    window.open(`https://wa.me/55${number}`, '_blank')
   }
 
   sanitizeNumber(): string {
