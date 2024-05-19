@@ -5,10 +5,14 @@ Wa.me Direct é uma aplicação que permite abrir conversas de WhatsApp sem prec
 ## Funcionalidades
 
 - Abra conversas de WhatsApp diretamente, sem precisar adicionar o contato.
+- Não precisa formatar o número nem limpar caracteres como parênteses e traços, copie e cole do jeito que quiser, pode até ter texto no meio (ex: "O número de lá é esse >>> (99) 98765-4321")
 - Interface simples e intuitiva, sem firula.
 
 ## Live Demo
-https://wame.leu.dev.br
+https://wame.leu.dev.br  
+
+[![image](https://github.com/jlcvp/wame-direct/assets/2317417/67f7a54b-3edc-491a-8666-3e0885ed5c32)](https://wame.leu.dev.br)
+
 
 ## Como Rodar Localmente
 
