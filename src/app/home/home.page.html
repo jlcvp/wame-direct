@@ -8,11 +8,18 @@
         <ion-card-subtitle>Não é necessário salvar o contato no seu aparelho <br></ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <ion-select label="País" label-placement="floating" (ionChange)="handleCountryChange($event)" [value]="selectedCountry" [compareWith]="isCountrySelected">
-          <ion-select-option *ngFor="let country of countries" [value]="country.iso">{{getFlagEmoji(country.iso)}} {{country.nome}} (+{{country.fone}})</ion-select-option>
-        </ion-select>
-      
-        <ion-input label="Número com DDD" labelPlacement="stacked" type="text" expand="block" placeholder="ex: (81) 98756-1234" [(ngModel)]="numberInput"></ion-input>
+        <ion-grid>
+          <ion-row>
+            <ion-col size-xs="12" size-sm="12" size-md="4">
+              <ion-select label="País" label-placement="stacked" (ionChange)="handleCountryChange($event)" [value]="selectedCountry" [compareWith]="isCountrySelected">
+                <ion-select-option *ngFor="let country of countries" [value]="country.iso">{{getFlagEmoji(country.iso)}} {{country.nome}} (+{{country.fone}})</ion-select-option>
+              </ion-select>
+            </ion-col>
+            <ion-col size-xs="12" size-sm="12" size-md="8">
+              <ion-input label="Número com DDD" labelPlacement="stacked" type="text" expand="block" placeholder="ex: (81) 98756-1234" [(ngModel)]="numberInput"></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
         <ion-button expand="block" (click)="openWhatsapp()" [disabled]="!isInputValid">Abrir Whatsapp</ion-button>
       </ion-card-content>
     </ion-card>
