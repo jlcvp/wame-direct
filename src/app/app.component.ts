@@ -63,6 +63,20 @@ export class AppComponent {
           break;
         case 'VERSION_INSTALLATION_FAILED':
           console.error(`Failed to install new app version '${evt.version.hash}': ${evt.error}`);
+          const alertError = await this.alertController.create({
+            backdropDismiss: false,
+            header: 'Atualização disponível',
+            message: 'Uma nova versão da aplicação está disponível e será carregada automaticamente',
+            buttons: [
+              {
+                text: 'Atualizar',
+                handler: () => {
+                  document.location.reload()
+                }
+              }
+            ]
+          })
+          await alertError.present()
           break;
       }
     })
