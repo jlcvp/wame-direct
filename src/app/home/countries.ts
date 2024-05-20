@@ -18,7 +18,7 @@ export const COUNTRIES: Country[] = [
     {"codigo":"024","fone":"244","iso":"AO","iso3":"AGO","nome":"Angola","nomeFormal":"República de Angola"},
     {"codigo":"660","fone":"1264","iso":"AI","iso3":"AIA","nome":"Anguilla","nomeFormal":"Anguilla"},
     {"codigo":"028","fone":"1268","iso":"AG","iso3":"ATG","nome":"Antigua e Barbuda","nomeFormal":"Antigua e Barbuda"},
-    {"codigo":"530","fone":"599","iso":"AN","iso3":"ANT","nome":"Antilhas Holandesas","nomeFormal":"Antilhas Holandesas"},
+    {"codigo":"530","fone":"599","iso":"CW","iso3":"ANT","nome":"Antilhas Holandesas","nomeFormal":"Antilhas Holandesas"},
     {"codigo":"010","fone":"672","iso":"AQ","iso3":"ATA","nome":"Antártida","nomeFormal":"Antártida"},
     {"codigo":"032","fone":"54","iso":"AR","iso3":"ARG","nome":"Argentina","nomeFormal":"República Argentina"},
     {"codigo":"051","fone":"374","iso":"AM","iso3":"ARM","nome":"Armênia","nomeFormal":"República da Armênia"},
