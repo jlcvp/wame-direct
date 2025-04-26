@@ -6,12 +6,12 @@ const routes: Routes = [
     path: '**',
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, useHash: true })
   ],
   exports: [RouterModule]
 })
