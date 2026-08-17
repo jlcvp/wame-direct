@@ -10,7 +10,32 @@ export class HomePage {
   countries = COUNTRIES
   numberInput: string = ''
   selectedCountry: string = 'BR'
-  constructor() {}
+
+  ionViewDidEnter() {
+    this.autofillNumberFromQuery()
+  }
+
+  private autofillNumberFromQuery() {
+    const queryKeys = ['number', 'phone', 'n', 'numero', 'tel']
+
+    const candidates = [
+      window.location.search,
+      window.location.hash.includes('?') ? `?${window.location.hash.split('?')[1]}` : ''
+    ]
+
+    for (const candidate of candidates) {
+      if (!candidate) continue
+
+      const params = new URLSearchParams(candidate)
+      for (const key of queryKeys) {
+        const queryValue = params.get(key)
+        if (queryValue && queryValue.trim()) {
+          this.numberInput = decodeURIComponent(queryValue.trim())
+          return
+        }
+      }
+    }
+  }
 
   openWhatsapp() {
     let number = this.sanitizeNumber()
